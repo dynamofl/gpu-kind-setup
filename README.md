@@ -11,7 +11,7 @@ This directory contains a self‑contained helper script for spinning up a GPU-e
 
 ### Prerequisites
 
-Install the dependencies first (Docker, kind, kubectl, Helm, Go, Make, jq, nvkind). The root `scripts/install-deps.sh` in this repo can do this for you.
+Install the dependencies first (Docker, kind, kubectl, Helm, Go, Make, jq, nvkind). The root `bootstrap/install-deps.sh` in this repo can do this for you.
 
 Your host must expose NVIDIA GPUs and have the driver + CUDA toolkit stack installed. If Docker is not already configured for the NVIDIA runtime, run the script with `CONFIGURE_TOOLKIT=true`.
 
