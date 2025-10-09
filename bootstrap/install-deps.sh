@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # ===== Config =====
-K8S_MINOR=${K8S_MINOR:-v1.34}      # change to v1.35 etc. if you want a different minor
+K8S_MINOR=${K8S_MINOR:-v1.34} 
 ORAS_VERSION=${ORAS_VERSION:-1.2.0}
 K8S_LIST=/etc/apt/sources.list.d/kubernetes.list
 K8S_KEYRING=/etc/apt/keyrings/kubernetes-apt-keyring.gpg
