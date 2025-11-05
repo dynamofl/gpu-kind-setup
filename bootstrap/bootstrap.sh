@@ -187,8 +187,8 @@ main() {
   log "Setting kubectl context to ${KUBE_CONTEXT}"
   run kubectl config use-context "${KUBE_CONTEXT}"
 
-  log "Adding CA certificates to trust store"
-  add_trust_store
+  #log "Adding CA certificates to trust store"
+  #add_trust_store
   log "Applying RuntimeClass"
   apply_runtimeclass
   log "Labeling GPU nodes"
