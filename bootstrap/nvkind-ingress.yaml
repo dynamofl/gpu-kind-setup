@@ -15,11 +15,9 @@ nodes:
     nodeRegistration:
       kubeletExtraArgs:
         node-labels: "ingress-ready=true"
-{{- range $gpu := until numGPUs }}
 - role: worker
   extraMounts:
     - hostPath: /dev/null
-      containerPath: /var/run/nvidia-container-devices/{{ $gpu }}
+      containerPath: /var/run/nvidia-container-devices/<GPU_UUID>
     - hostPath: /usr/local/share/ca-certificates
       containerPath: /usr/local/share/ca-certificates
-{{- end }}
