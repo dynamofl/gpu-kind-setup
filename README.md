@@ -15,6 +15,8 @@ Install the dependencies first (Docker, kind, kubectl, Helm, Go, Make, jq, nvkin
 
 Your host must expose NVIDIA GPUs and have the driver + CUDA toolkit stack installed. If Docker is not already configured for the NVIDIA runtime, run the script with `CONFIGURE_TOOLKIT=true`.
 
+Get GPU UUID and replace in `nvkind-ingress.yaml` by running: `nvidia-smi -L`
+
 ### Usage
 
 ```bash

@@ -182,10 +182,15 @@ main() {
   log "Setting kubectl context to ${KUBE_CONTEXT}"
   run kubectl config use-context "${KUBE_CONTEXT}"
 
+  log "Applying RuntimeClass"
   apply_runtimeclass
+  log "Labeling GPU nodes"
   label_gpu_nodes
+  log "Installing NVIDIA device plugin"
   install_device_plugin
+  log "Waiting for GPU resources"
   wait_for_gpu_resources
+  log "Running smoke test"
   run_smoke_test
 
   log "Cluster '${CLUSTER_NAME}' is ready for GPU workloads."
